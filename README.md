@@ -1,45 +1,14 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+**Title:** Rock Paper Scissors
+**Group No:** Group 3
+**Group Members:** Nyla Rashied, Nkem Ohanenye
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+**Sensors:** 
+●	Image sensor for detecting and conveying information used to make an image.
+●	Motion sensors to detect movement.
+●	Touch sensor
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+**Goal:**
+	There are many games made for people, but not many for the ones that want to play a game with someone, or an only child that just wants a friend. Our app for Rock Paper Scissors is crafted on this attempt to give a person someone to play with. The game will perform on an app and is played exactly how it is when you play within real life, however, you're going to compete with an AI. Outside of the game menu, there will be a picture of the character that you can interact with by tapping him (not physically talking, just some words strung up in a string array and randomly picked). If time will allow, we will add different versions of the Rock Paper Scissors game like, without a camera touch-based game, or a game where you always win. An addition that can be added to the inserted character is that it will notice when the phone is moved harshly and will react with other strings, telling the user “oww, be more careful,” or something to that regard.
 
----
-
-## Edit a file
-
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
-
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
-
----
-
-## Create a file
-
-Next, you’ll add a new file to this repository.
-
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
-
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
-
----
-
-## Clone a repository
-
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
-
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
-
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+**Application Scenario:**     
+	The target audience for this application will be people that just want to spend their time playing a game with someone else who also interacts with them. While there are several game applications that exist, we wanted to create one that helped the people that were more lonely. Or even someone who always wants to win in a match. Our game will help the player to never rely on chance to win but to incorporate some strategy. 
