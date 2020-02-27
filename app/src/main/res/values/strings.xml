@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rock Paper Scissors</string>
+    <string name="button_play">Let\'s Play</string>
+    <string name="main_label_name">Rock Paper Scissors</string>
+</resources>
