@@ -1,5 +1,22 @@
 <resources>
+    <!-- the strings for the base activity -->
     <string name="app_name">Rock Paper Scissors</string>
-    <string name="button_play">Let\'s Play</string>
     <string name="main_label_name">Rock Paper Scissors</string>
+    <string name="first_game">Play With Camera</string>
+    <string name="second_game">Play Button Game</string>
+    <!-- activity for the camera activity -->
+    <string name="make_hand_gesture">Make A Rock Paper or Scissor with your hand</string>
+    <!-- the strings for use in both game activities (rock paper and scissors)-->
+    <string name="display_button_main_label">Pick a Hand</string>
+    <string name="rock">Rock</string>
+    <string name="paper">Paper</string>
+    <string name="scissors">Scissors</string>
+    <!-- the strings for the result activity -->
+    <string name="player">Player</string>
+    <string name="computer">Computer</string>
+    <string name="player_win">The Player Wins!</string>
+    <string name="com_win">The Computer Wins!</string>
+    <string name="tie_win">It\'s a Tie</string>
+    <string name="play_again">Play Again?</string>
+    <string name="pick_another">Try Another Hand</string>
 </resources>
