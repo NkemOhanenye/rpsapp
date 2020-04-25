@@ -19,20 +19,23 @@ public class DisplayButtonResults extends AppCompatActivity {
         setContentView(R.layout.activity_display_button_results);
 
         Intent intent = getIntent();
+        Bundle bundle = getIntent().getExtras();
 
         // all reference variables that need to be created
+        assert bundle != null;
+        String choice = bundle.getString("playerChoice");
         TextView result = findViewById(R.id.lblResults);
         TextView playerChoice = findViewById(R.id.lblPlayerChoice);
         TextView comChoice = findViewById(R.id.lblComChoice);
         Button btnResult = findViewById(R.id.btnResult);
 
-        playerChoice.setText(checkPlayerChoice());
+        playerChoice.setText(choice);
         comChoice.setText(checkComputerChoice());
 
         result.setText(displayResult(playerChoice, comChoice, btnResult));
     }
     // checks what the player picks
-    protected String checkPlayerChoice() {
+    /*protected String checkPlayerChoice() {
         String playerChoice = ;
 
         if (playerChoice == options[0]){
@@ -44,7 +47,7 @@ public class DisplayButtonResults extends AppCompatActivity {
         } else {
             return playerChoice;
         }
-    }
+    }*/
     // checks what the computer picks
     protected String checkComputerChoice(){
         Random r= new Random();
@@ -55,20 +58,22 @@ public class DisplayButtonResults extends AppCompatActivity {
         else if (choice.equals(options[1])){
             return choice; // computer chooses paper
         }
-        else {
+        else if (choice.equals(options[2])){
             return choice; // computer chooses scissors
+        } else {
+            return "";
         }
     }
     // checks which one wins
     protected String displayResult(TextView player, TextView com, Button result) {
-        if (player.getText() == options[0] && com.getText() == options[2] ||
-                player.getText() == options[1] && com.getText() == options[0] ||
-                player.getText() == options[2] && com.getText() == options[1]) {
+        if (player.getText().toString().equals(options[0]) && com.getText().toString().equals(options[2]) ||
+                player.getText().toString().equals(options[1]) && com.getText().toString().equals(options[0]) ||
+                player.getText().toString().equals(options[2]) && com.getText().toString().equals(options[1])) {
             result.setText(getString(R.string.play_again));
             return getString(R.string.player_win);  // player wins
-        } else if (player.getText() == options[0] && com.getText() == options[1] ||
-                player.getText() == options[1] && com.getText() == options[2] ||
-                player.getText() == options[2] && com.getText() == options[0]) {
+        } else if (player.getText().toString().equals(options[0]) && com.getText().toString().equals(options[1]) ||
+                player.getText().toString().equals(options[1]) && com.getText().toString().equals(options[2]) ||
+                player.getText().toString().equals(options[2]) && com.getText().toString().equals(options[0])){
             result.setText(getString(R.string.play_again));
             return getString(R.string.com_win);  // computer wins
         } else {

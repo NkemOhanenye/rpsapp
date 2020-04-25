@@ -19,4 +19,5 @@
     <string name="tie_win">It\'s a Tie</string>
     <string name="play_again">Play Again?</string>
     <string name="pick_another">Try Another Hand</string>
+    <string name="Error">An Error Occurred</string>
 </resources>

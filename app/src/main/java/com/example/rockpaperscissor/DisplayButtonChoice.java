@@ -13,7 +13,8 @@ import android.widget.Toast;
 import java.util.Random;
 
 public class DisplayButtonChoice extends AppCompatActivity {
-    String options[] ={"Rock","Paper","Scissor"};
+    private static String options[] ={"Rock","Paper","Scissor"};
+    private static String choice = "";
     //int uopt;
     //TextView tv;
 
@@ -24,17 +25,20 @@ public class DisplayButtonChoice extends AppCompatActivity {
     }
 
     public void playerChoice(View view) {
-        String choice;
+
         Intent intent = new Intent(this, DisplayButtonResults.class);
         switch (view.getId()){
             case R.id.btnRock:
                 choice = options[0];
+                intent.putExtra("playerChoice", choice);
                 break;
             case R.id.btnPaper:
                 choice = options[1];
+                intent.putExtra("playerChoice", choice);
                 break;
             case R.id.btnScissors:
                 choice = options[2];
+                intent.putExtra("playerChoice", choice);
                 break;
         }
         startActivity(intent);
