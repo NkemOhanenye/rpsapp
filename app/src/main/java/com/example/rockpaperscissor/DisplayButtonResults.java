@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -34,20 +35,6 @@ public class DisplayButtonResults extends AppCompatActivity {
 
         result.setText(displayResult(playerChoice, comChoice, btnResult));
     }
-    // checks what the player picks
-    /*protected String checkPlayerChoice() {
-        String playerChoice = ;
-
-        if (playerChoice == options[0]){
-            return playerChoice;
-
-        } else if (playerChoice == options[1]){
-            return playerChoice;
-
-        } else {
-            return playerChoice;
-        }
-    }*/
     // checks what the computer picks
     protected String checkComputerChoice(){
         Random r= new Random();
@@ -79,6 +66,17 @@ public class DisplayButtonResults extends AppCompatActivity {
         } else {
             result.setText(getString(R.string.pick_another));
             return getString(R.string.tie_win);  // tie
+        }
+    }
+    // checks to see what value the result button has
+    public void btnResultPress(View view) {
+        Button btnResult = findViewById(R.id.btnResult);
+        if (btnResult.getText().toString().equals(getString(R.string.play_again))) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        } else {
+            Intent intent = new Intent(this, DisplayButtonChoice.class);
+            startActivity(intent);
         }
     }
 }
