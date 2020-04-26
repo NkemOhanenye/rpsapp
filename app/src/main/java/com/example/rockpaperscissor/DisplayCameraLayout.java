@@ -19,7 +19,9 @@ import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfInt;
 import org.opencv.core.MatOfPoint;
+import org.opencv.core.MatOfPoint2f;
 import org.opencv.core.Point;
+import org.opencv.core.Rect;
 import org.opencv.core.Scalar;
 import org.opencv.core.Size;
 import org.opencv.imgproc.Imgproc;
@@ -74,22 +76,24 @@ public class DisplayCameraLayout extends AppCompatActivity implements CameraBrid
 
      @Override
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
-        Mat mRgba = inputFrame.rgba();
-        // removes noise
-        Imgproc.GaussianBlur(inputFrame.gray(), mRgba, new Size(7, 7), 0 ,  3);
-        // changes image to threshold for easier detection
-        Imgproc.threshold(mRgba, mRgba, 150, 255, Imgproc.THRESH_BINARY);
-
-        Imgproc.Canny(inputFrame.gray(), inputFrame.gray(), 18, 18);
+         Mat mRgba = inputFrame.rgba();
          List<MatOfPoint> contours = new ArrayList<>();
+         Mat gray = new Mat();
          Mat hierarchy = new Mat();
-         Imgproc.findContours(inputFrame.gray(), contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE);
+         // blurs the image to try and get the focal point
+         Imgproc.GaussianBlur(mRgba, gray, new Size(7, 7), 2,  2);
+         // uses Canny's matricies to find the contour lines of an image
+         Imgproc.Canny(mRgba, gray, 120, 200);
+         // finds the matricies
+         Imgproc.findContours(gray, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE, new Point(0,0));
 
-        for (int contourIdx = 0; contourIdx < contours.size(); contourIdx++){
-            Imgproc.drawContours(mRgba, contours, contourIdx, new Scalar(0,0,250), 2);
-        }
+         //hierarchy.release();
 
-        return mRgba;
+         for (int contourIdx = 0; contourIdx < contours.size(); contourIdx++){
+             Imgproc.drawContours(mRgba, contours, contourIdx, new Scalar(250,0,0), 3);
+         }
+
+         return mRgba;
     }
 
     @Override
