@@ -7,7 +7,6 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/mainLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_label_name"
@@ -22,7 +21,6 @@
         app:layout_constraintVertical_bias="0.108" />
 
     <Button
-        android:id="@+id/camera_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="openCameraGame"
@@ -35,7 +33,6 @@
         app:layout_constraintVertical_bias="0.379" />
 
     <Button
-        android:id="@+id/button_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="openButtonGame"

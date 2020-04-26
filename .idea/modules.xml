@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="rpsapp/app" />
+      <module fileurl="file://$PROJECT_DIR$/openCVLibrary349/openCVLibrary349.iml" filepath="$PROJECT_DIR$/openCVLibrary349/openCVLibrary349.iml" group="rpsapp/openCVLibrary349" />
       <module fileurl="file://$PROJECT_DIR$/rpsapp.iml" filepath="$PROJECT_DIR$/rpsapp.iml" group="rpsapp" />
     </modules>
   </component>
