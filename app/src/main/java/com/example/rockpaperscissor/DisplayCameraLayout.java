@@ -88,9 +88,9 @@ public class DisplayCameraLayout extends AppCompatActivity implements CameraBrid
         Imgproc.cvtColor(mRgba, gray, Imgproc.COLOR_RGB2GRAY);
         // blurs the image to try and get the focal point
         Imgproc.GaussianBlur(gray, gray, new Size(7, 7), 2, 2);
-        // uses Canny's matricies to find the contour lines of an image
+        // uses Canny's matrices to find the contour lines of an image
         Imgproc.Canny(gray, cannyOutput, 150, 200);
-        // finds the matricies
+        // finds the matrices
         Imgproc.findContours(cannyOutput, contours, hierarchy, Imgproc.RETR_TREE, Imgproc.CHAIN_APPROX_SIMPLE, new Point(0, 0));
 
         List<MatOfPoint> hullList = new ArrayList<>();
