@@ -6,7 +6,6 @@
     <string name="second_game">Play Button Game</string>
     <!-- activity for the camera activity -->
     <string name="make_hand_gesture">Make A Rock, Paper or Scissor with your hand</string>
-    <string name="set_choice">Set Choice</string>
     <!-- the strings for use in both game activities (rock paper and scissors)-->
     <string name="display_button_main_label">Pick a Hand</string>
     <string name="rock">Rock</string>

@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class DisplayCameraResults extends AppCompatActivity {
 
-    String options[] ={"Rock","Paper","Scissor"};
+    String options[] ={"Rock","Paper","Scissor"}; 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
