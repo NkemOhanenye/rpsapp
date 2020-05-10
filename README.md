@@ -1,6 +1,8 @@
 # rpsapp
 A Rock Paper Scissors Android Studio game made in OpenCV
 
+The Original repo: https://bitbucket.org/rockpaperscissorsapp/rpsapp/src/master/
+
 This game does not work fully but does the basics that get it to work.
 
 Drawbacks:
